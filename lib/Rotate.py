@@ -6,8 +6,7 @@ class Rotate(Transform):
         if axis is not None:
             axis = axis.lower()
 
-        if axis not in (None, 'x', 'y', 'z'):
-            raise ValueError(f"{axis} is an invalid axis.")
+        assert axis in (None, 'x', 'y', 'z')
 
         dim = 2 if axis is None else 3
         M = np.eye(dim + 1, dtype=float)
