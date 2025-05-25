@@ -96,14 +96,12 @@ points3D = np.array([
 ])
 edges3D = [(0,1), (1,2), (2,3), (3,0), (4,0), (4,1), (4,2), (4,3)]
 
-# Erstelle, rotiere und projiziere die Pyramide
 pyramid = Shape(points3D, edges3D) \
     .rotate(np.pi/6, axis='y') \
     .scale(0.8, 2.5, 0.8) \
     .translate(0, -1, 0) \
     .parallel_projection(direction=(0, 0, 1), eliminate='z')
 
-# Visualisiere die 2D-Kontur
 TransformVisualizer(dim=3) \
     .with_viewport((-2, 2),(-2, 2),(-2, 2)) \
     .with_shape(pyramid, 'blue') \
