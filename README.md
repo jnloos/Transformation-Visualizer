@@ -16,7 +16,7 @@ Under the hood, each transformation is a matrix multiplication—making chaining
 
 <img src="./media/2D-example.gif"/>
 
-A square that travels to the four corners at distance 2 from the origin, spinning 45° about its center at each stop.
+A square that travels around the origin and spins 45° about its center at each stop.
 
 ```python
 import numpy as np
